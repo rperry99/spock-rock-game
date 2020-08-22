@@ -8,3 +8,10 @@ This is project 13 / 20.
 You can view a live version of the project [here]()
 
 ## Thoughts
+
+## Work Log
+
+### 8/21/2020
+
+- Started the project
+- Added base files and created repo
