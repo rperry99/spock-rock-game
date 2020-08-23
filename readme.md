@@ -15,3 +15,9 @@ You can view a live version of the project [here]()
 
 - Started the project
 - Added base files and created repo
+- Start HTML
+
+### 8/22/2020
+
+- Finish HTML
+- Finish CSS
