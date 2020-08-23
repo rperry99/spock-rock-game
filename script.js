@@ -25,6 +25,8 @@ const choices = {
 };
 
 let computerChoice = '';
+let playerScoreNumber = 0;
+let computerScoreNumber = 0;
 
 // Reset all selected icons
 function resetSelected() {
@@ -78,17 +80,36 @@ function displayComputerChoice() {
   }
 }
 
+// Check Results, increase scores, update ResultText
+function updateScore(playerChoice) {
+  if (playerChoice === computerChoice) {
+    resultText.textContent = "It's a tie!";
+  } else {
+    const choice = choices[playerChoice];
+    if (choice.defeats.indexOf(computerChoice) > -1) {
+      resultText.textContent = 'You won!';
+      playerScoreNumber++;
+      playerScoreEl.textContent = playerScoreNumber;
+    } else {
+      resultText.textContent = 'You lose!';
+      computerScoreNumber++;
+      computerScoreEl.textContent = computerScoreNumber;
+    }
+  }
+}
+
 // Call functions to process turn
-function checkResult() {
+function checkResult(playerChoice) {
   resetSelected();
   computerRandomChoice();
   displayComputerChoice();
+  updateScore(playerChoice);
 }
 
 // Passing player selection valie and style icons
 function select(playerChoice) {
   // Reset all icon selectiosn
-  checkResult();
+  checkResult(playerChoice);
 
   // Add Selected styling and update player choice
   switch (playerChoice) {
