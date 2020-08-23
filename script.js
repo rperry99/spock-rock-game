@@ -35,6 +35,16 @@ function resetSelected() {
   });
 }
 
+// Reset score and choices
+function resetAll() {
+  playerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreNumber = 0;
+  computerScoreEl.textContent = computerScoreNumber;
+  resultText.textContent = 'Who will win?';
+  resetSelected();
+}
+
 // Random computer choice
 function computerRandomChoice() {
   const computerChoiceNumber = Math.floor(Math.random() * 5);

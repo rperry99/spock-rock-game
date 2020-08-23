@@ -21,3 +21,11 @@ You can view a live version of the project [here]()
 
 - Finish HTML
 - Finish CSS
+
+### 8/23/2020
+
+- Add selected styles to clicked player choice
+- Add computer logic (choose a random number and make a selection)
+- Add selected style to computer choice
+- Add score functionality
+- Add reset the game funcitonality
