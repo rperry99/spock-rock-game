@@ -1,3 +1,5 @@
+import { startConfetti, stopConfetti, removeConfetti } from './confetti.js';
+
 // Element Constants
 const playerScoreEl = document.getElementById('playerScore');
 const playerChoiceEl = document.getElementById('playerChoice');
@@ -33,6 +35,10 @@ function resetSelected() {
   allGameIcons.forEach((icon) => {
     icon.classList.remove('selected');
   });
+
+  // Stop confetti
+  stopConfetti();
+  removeConfetti();
 }
 
 // Reset score and choices
@@ -44,6 +50,7 @@ function resetAll() {
   resultText.textContent = 'Who will win?';
   resetSelected();
 }
+window.resetAll = resetAll;
 
 // Random computer choice
 function computerRandomChoice() {
@@ -97,6 +104,7 @@ function updateScore(playerChoice) {
   } else {
     const choice = choices[playerChoice];
     if (choice.defeats.indexOf(computerChoice) > -1) {
+      startConfetti();
       resultText.textContent = 'You won!';
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
@@ -147,3 +155,7 @@ function select(playerChoice) {
       break;
   }
 }
+window.select = select;
+
+// Start the game with a reset board
+resetAll();
