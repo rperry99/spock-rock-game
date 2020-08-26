@@ -9,6 +9,8 @@ You can view a live version of the project [here](https://rperry99.github.io/spo
 
 ## Thoughts
 
+This was a pretty neat project. I think the game itself was actually pretty simple. The part that really interested me with this project was [confetti.js](https://www.cssscript.com/confetti-falling-animation/) and modules. Modules are something that I have never used before. I am used to scss where I can reference different .scss files inside of other .scss files. I never really thought I could do this with JavaScript. It makes my JS code pretty clean if I can just reference another .js file like that. I like to not clutter my files if I can help it.
+
 ## Work Log
 
 ### 8/21/2020
