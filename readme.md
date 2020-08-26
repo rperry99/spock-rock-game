@@ -5,7 +5,7 @@ This is project 13 / 20.
 
 ## Live Project
 
-You can view a live version of the project [here]()
+You can view a live version of the project [here](https://rperry99.github.io/spock-rock-game/)
 
 ## Thoughts
 
@@ -29,3 +29,7 @@ You can view a live version of the project [here]()
 - Add selected style to computer choice
 - Add score functionality
 - Add reset the game funcitonality
+
+### 8/24/2020
+- Add Confetti.js
+- When the player wins, they can see confetti!
